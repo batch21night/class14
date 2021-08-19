@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrap{
+    width: 500px;
+    border: 1px solid red;
+    margin: 50px auto;
+}
+.wrap img{
+    max-width: 100%;
+}
+.wrap img:hover{
+    transform: rotate(180deg) scale(2);
+    transition: .5s;
+}
+.div1{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: relative;
+}
+.div1::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* menu css  */
+.header{}
+.menu {
+    text-align: center;
+    background: green;
+}
+.menu li {
+    display: inline-block;
+    margin-left: -4px;
+}
+.menu li a {
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    background: #044c04;
+    position: relative;
+}
+.menu li a:hover{
+    background-color: transparent;
+}
+.menu li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 12%;
+    bottom: 6px;
+}
+.menu li a:hover::after{
+    width: 76%;
+    transition: .5s;
+}
